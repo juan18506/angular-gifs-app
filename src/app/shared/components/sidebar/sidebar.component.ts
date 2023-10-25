@@ -12,12 +12,12 @@ export class SidebarComponent {
     private gifsService: GifsService
   ) { }
 
-  get tags(): string[] {
-    return this.gifsService.tagsHistory;
-  }
-
   searchTag(tag: string): void {
     this.gifsService.searchTag(tag);
+  }
+
+  get tags(): string[] {
+    return this.gifsService.tagsHistory;
   }
 
 }
